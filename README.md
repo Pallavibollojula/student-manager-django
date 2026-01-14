@@ -55,7 +55,7 @@ STUDENT_MANAGER/
 │   └── manage.py
 │
 └── venv/
-```md
+```
 
 ---
 
