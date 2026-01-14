@@ -222,7 +222,7 @@ Use a new roll number for each student.
 
 ---
 
-## 🌟 Future Improvements (Optional)
+## 🌟 Future Improvements 
 
 - ✅ Search student by roll number  
 - ✅ Add delete button inside student list  
