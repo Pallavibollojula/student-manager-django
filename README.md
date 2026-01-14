@@ -60,6 +60,7 @@ STUDENT_MANAGER/
 │   └── manage.py
 │
 └── venv/
+```
 ⚙️ Setup & Run
 1) Create virtual environment
 bash
