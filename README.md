@@ -1,11 +1,5 @@
-<<<<<<< HEAD
+
 # student-manager-django
-=======
-Super Pallavi 😄💙 then nee **current folder structure** (project-level `templates/` + `static/`) ki match ayye **final README.md** neat ga ichestha ✅
-Copy paste into `README.md`
-
----
-
 ```md
 # 🎓 Student Manager (Django + Templates + Static Files)
 
@@ -253,4 +247,3 @@ Django Practice Project 🚀
 ```
 
 
->>>>>>> 3974bcb (Student Manager project)
