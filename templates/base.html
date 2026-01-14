@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Manager - Home</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h2 class="logo">StudentManager</h2>
+    <nav class="nav-links">
+      <a href="{% url 'home' %}">Home</a>
+      <a href="{% url 'student_list' %}">Students</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Manage Students Easily 📚</h1>
+    <p>Add / Update / Delete students from here.</p>
+  </section>
+
+  <!-- Forms -->
+  <section class="students">
+    <div class="container-3">
+
+      <!-- ADD -->
+      <div class="card">
+        <h2>Add Student ➕</h2>
+        <form method="POST" action="{% url 'student_add' %}" class="form">
+          {% csrf_token %}
+          <input type="text" name="full_name" placeholder="Full Name" required />
+          <input type="number" name="age" placeholder="Age" required />
+          <input type="text" name="roll_number" placeholder="Roll Number" required />
+          <input type="date" name="enrollment_date" required />
+          <button type="submit" class="btn">Add</button>
+        </form>
+      </div>
+
+      <!-- UPDATE -->
+      <div class="card">
+        <h2>Update Student ✏️</h2>
+        <form method="POST" action="{% url 'student_update' %}" class="form">
+          {% csrf_token %}
+          <input type="text" name="roll_number" placeholder="Roll Number (Required)" required />
+          <input type="text" name="full_name" placeholder="New Full Name (Optional)" />
+          <input type="number" name="age" placeholder="New Age (Optional)" />
+          <input type="date" name="enrollment_date" />
+          <button type="submit" class="btn">Update</button>
+        </form>
+      </div>
+
+      <!-- DELETE -->
+      <div class="card">
+        <h2>Delete Student 🗑️</h2>
+        <form method="POST" action="{% url 'student_delete' %}" class="form">
+          {% csrf_token %}
+          <input type="text" name="roll_number" placeholder="Roll Number" required />
+          <button type="submit" class="btn danger">Delete</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2026 StudentManager | Built by Pallavi 💙</p>
+  </footer>
+</body>
+</html>
